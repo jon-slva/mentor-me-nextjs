@@ -1,0 +1,181 @@
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
+
+
+.form-box {
+    // display: flex;
+    width: 300px;
+    height: fit-content;
+    border: 0 0 0.0625rem 0;
+    border-bottom: solid $mercury;
+    gap: 1rem;
+    background-color: $white;
+    margin-top: 220px;
+    border-radius: 0.25rem;
+    padding: 0 16px;
+
+    @include desktop {
+        margin-top: 280px;
+    }
+}
+
+
+.submit-form-box {
+    width: 360px;
+    height: 80dvh;
+    border: 0 0 0.0625rem 0;
+    border-bottom: solid $mercury;
+    gap: 1rem;
+    background-color: $white;
+    // margin-top: 280px;
+    border-radius: 0.25rem;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12dvh;
+    overflow: scroll;
+
+    @include desktop {
+        width: 40%;
+        height: fit-content;
+        border: 0 0 0.0625rem 0;
+        border-bottom: solid $mercury;
+        gap: 1rem;
+        background-color: $white;
+        // margin-top: 280px;
+        border-radius: 0.25rem;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 4%;
+    }
+}
+
+#signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px 0;
+
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        // margin: 16px 0;
+    }
+
+    & section {
+        // display: flex;
+        justify-content: center;
+        gap: 24px;
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+    }
+}
+
+
+.form-column {
+    // width: 50%;
+
+    @include desktop {
+        width: 50%;
+    }
+
+}
+
+// Comment Input Area
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+
+    &__header {
+        color: $earth-blue;
+        // font-size: 0.625rem;
+        // line-height: 1.25rem;
+        margin: 0;
+        // text-transform: uppercase;
+        margin-bottom: 16px;
+
+        @include tablet {
+            @include h2-tablet__desk;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+    }
+
+    &__input-header {
+        color: $silver;
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        margin: 0;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+
+        @include tablet {
+            @include labels-buttons($silver);
+        }
+    }
+
+    &__name-input {
+        @include p-mobile;
+        @include font-bold;
+        width: 100%;
+        height: 2.25rem;
+        margin: 0 0 8px 0;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        border: 0.0625rem $mercury solid;
+        background-color: $alabaster;
+        outline: none;
+
+        &:focus-visible {
+            border: 0.0625rem $light-black solid;
+        }
+
+        @include tablet {
+            height: 32px;
+            padding: 0.5rem;
+        }
+    }
+
+    &__submit-btn {
+        @include labels-buttons($white);
+        @include button-styling;
+
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__subtext {
+        @include p-tablet__desk;
+        text-align: center;
+    }
+}
+
+//     &__comment-input {
+//         @include p-mobile;
+//         @include font-demi;
+//         outline: none;
+//         width: 100%;
+//         height: 2.25rem;
+//         margin: 0 0 1rem 0;
+//         padding: 0.75rem;
+//         border-radius: 0.25rem;
+//         border: 0.0625rem $mercury solid;
+//         background-color: $alabaster;
+//         height: 6.25rem;
+//         &:focus-visible {
+//             border: 0.0625rem $bandsite-black solid;
+//         }
+//         @include tablet {
+//             height: 5.625rem;
+//             padding: 1rem;
+//         }
+//     }
+// }
