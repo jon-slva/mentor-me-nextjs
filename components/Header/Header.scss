@@ -1,0 +1,98 @@
+@import '../../styles/partials/variables';
+@import '../../styles/partials/mixins';
+
+.header {
+    // height: 60px;
+    width: 100%;
+    pointer-events: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    position: relative;
+
+    @include desktop {
+        height: 60px;
+        background-color: $earth-blue;
+        width: 100%;
+        pointer-events: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        position: relative;
+    }
+
+    &__logo {
+        display: none;
+
+        @include desktop {
+            display: block;
+            color: $white;
+            font-size: 38px;
+            font-family: "Philosopher-Bold";
+            margin-bottom: 4px;
+            z-index: 3;
+        }
+    }
+
+    &__account {
+        position: absolute;
+        // right: 8px;
+        top: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 8px;
+        pointer-events: all;
+
+
+
+        @include desktop {
+            top: 8px;
+            position: absolute;
+            color: $white;
+            right: 20vw;
+            font-weight: bold;
+        }
+
+        &--text {
+            display: none;
+
+            @include desktop {
+                display: block;
+                margin-top: 11px;
+                z-index: 1;
+                ;
+            }
+        }
+
+        &--icon {
+            height: 50px;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(101%) contrast(104%);
+            pointer-events: auto;
+            z-index: 3;
+
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+
+    &__home {
+        &--icon {
+            height: 40px;
+            padding-left: 2px;
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(101%) contrast(104%);
+            pointer-events: auto;
+            z-index: 3;
+
+            @include desktop {
+                display: none;
+            }
+
+        }
+    }
+}
